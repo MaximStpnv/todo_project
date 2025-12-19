@@ -1,4 +1,4 @@
-# TODO Service (FastAPI + SQLite)
+# TODO (FastAPI + SQLite)
 
 TODO-сервис на FastAPI с хранением задач в SQLite. 
 
@@ -18,11 +18,9 @@ TODO-сервис на FastAPI с хранением задач в SQLite.
 ## Запуск локально
 
 
-В корне проекта:
-
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # macOS/Linux
+source .venv/bin/activate   
 
 pip install -r requirements.txt
 uvicorn app.main:app --reload 
@@ -35,11 +33,7 @@ docker pull maximstep/todo-service
 
 docker volume create todo_data
 
-docker run -d \
-  --name todo-service \
-  -p 8000:80 \
-  -v todo_data:/app/data \
-  maximstep/todo-service
+docker run -d -p 8000:80 -v todo_data:/app/data maximstep/todo-service
 ```
 
 Затем доступ по ссылке:
